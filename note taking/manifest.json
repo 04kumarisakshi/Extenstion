@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Note taking",
+    "version": "0.1",
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["jquery-3.6.0.js", "content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "html/popup.html",
+      "default_icon": "pencil.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "permissions": [
+      "storage",
+      "tabs"
+    ]
+  }
